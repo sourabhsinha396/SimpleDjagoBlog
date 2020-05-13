@@ -18,5 +18,5 @@ def homepage(request):
 def ajaxsave(request):
 	print(request.POST)
 	print(request.POST['title'])
-	# BlogModel.objects.create(title=request.POST.get('title'),content = request.POST.get('content'))
+	BlogModel.objects.create(title=request.POST['title'],content = request.POST['textareacontent'],location = request.POST['location'])
 	return JsonResponse({'message':'It worked fine'})

@@ -51,7 +51,9 @@
           data: { title: title, textareacontent: content, location: location },
 
           success: function (data) {
-            console.log("It worked");
+            $("#error-list").html(
+              '<p style="color:brown">Form Successfully Submitted</p>'
+            );
             console.log(data);
           },
           error: function (data) {},
